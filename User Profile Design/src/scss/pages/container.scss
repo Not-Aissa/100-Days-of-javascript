@@ -1,0 +1,8 @@
+@import "../mixins/flex/flex.scss";
+
+.container {
+  @include flex(column, center, center);
+  position: relative;
+  height: 100vh;
+  margin: 0 auto;
+}

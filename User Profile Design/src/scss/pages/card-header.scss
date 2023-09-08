@@ -1,0 +1,56 @@
+@import "../variables/colors.scss";
+@import "../mixins/flex/flex.scss";
+@import "../mixins/reset/reset-element.scss";
+
+.container .card-header {
+  position: absolute;
+  width: 100%;
+
+  .card-container-section {
+    padding: 0.5rem;
+    background-color: $white_color;
+
+    .content {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #ccc2c8;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .card-info-section {
+    @include flex(row, space-between, center);
+    padding: 0.5rem;
+    background-color: $white_color;
+    margin-top: 0.5rem;
+
+    .projects-container,
+    .followers-container,
+    .articles-container {
+      @include flex(column, center, center);
+      gap: 0.5rem;
+
+      .content {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #ccc2c8;
+      }
+    }
+  }
+
+  .card-actions-section {
+    margin-top: 0.5rem;
+
+    button {
+      @include reset-element;
+      width: 100%;
+      background-color: $white_color;
+      padding: 0.5rem 0;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition-duration: 0.5s;
+    }
+  }
+}
